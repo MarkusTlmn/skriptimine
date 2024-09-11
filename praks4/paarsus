@@ -1,0 +1,23 @@
+#!/bin/bash
+# paaris või paaritu arv
+# skripti algus
+
+# kontrollib kas skriptile anti piisavalt argumente
+if [ $# -ne 1 ]; then
+    echo "Kasutamine: $0 <arv>"
+    exit 1
+fi
+
+arv=$1
+
+# % jagab arvu kahega nii kaua kui võimalik ning väljastab jäägi
+vastus=$((arv % 2))
+
+# Kui vastus ehk jääk on 1, siis on tegu paaritu arvuga, muidu on paaris
+if [ $vastus -eq 1 ]; then
+    echo "Antud arv on paaritu"
+else
+    echo "Antud arv on paaris"
+fi
+
+# Skripti lõpp
