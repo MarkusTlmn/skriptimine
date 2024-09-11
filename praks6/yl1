@@ -1,1 +1,19 @@
-aaa
+#!/bin/bash
+
+# esimese 10 paarisarvu summa arvutaja
+
+# skripti algus
+
+summa=0
+paarisarvud=10
+ 
+for (( i=1; i<=paarisarvud; i++ ))
+do
+  if ((i % 2 == 0)); then 
+    summa=$(( summa + i ))
+  fi 
+done
+
+echo "Arvude vahemikus 1 kuni 10 paarisarvude summa on: $summa"
+
+# skripti lõpp
