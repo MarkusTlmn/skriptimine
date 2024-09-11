@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# suvalise täisarvu numbrite summa
+# skripti algus
+read -p "Sisesta suvaline täisarv: " tarv
+
+summa=0 
+
+while [ $tarv -ne 0 ]
+do
+	bomba=$(($tarv % 10))
+	summa=$(($summa + $bomba))
+	tarv=$(($tarv / 10))
+done
+echo $summa
