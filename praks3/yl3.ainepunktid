@@ -1,0 +1,14 @@
+#!/bin/bash
+#
+# Nädalse ajakulu kalkulaator vastavalt ainepunktidele ja nädalatele
+#
+# skripti algus
+#
+read -p "Sisestage ainepunktide arv: " ainep
+read -p "Sisestage nädalate arv: " ndl
+# scale käsk ümardab arvu esimese komakohani (on võimalik valida mitmenda koma kohane vahetades numbrit scale=x)
+aeg=`echo "scale=1; ($ainep*26/$ndl)" | bc -l`
+aega="`echo "($aeg+0.9)/1" | bc`" 
+echo $aega
+#
+# skripti algus

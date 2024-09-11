@@ -1,0 +1,17 @@
+#!/bin/bash
+# paaris või paaritu arv
+# skripti algus
+
+# Sisendi küsimine
+read -p "Sisesta suvaline arv: " arv
+
+# % jagab arvu kahega nii kaua kui võimalik ning väljastab jäägi
+vastus=$((arv % 2))
+
+# kui vastus ehk jääk on 1 siis on tegu paaritu arvuga aga kui vastus on 2 siis on tegu paarisarvuga
+if (($vastus == 1))
+then echo "Antud arv on paaritu"
+else echo "Antud arv on paaris"
+fi
+
+#skripti lõpp

@@ -1,0 +1,17 @@
+#!/bin/bash
+#
+# Kuupäev ning kalender
+#
+# skripti algus
+#
+# $(date) väljastab tänase kuupäeva
+#
+echo ""
+echo "$(date)"
+#
+# cal väljastab praeguse kuu kalendri
+#
+echo ""
+cal
+#
+# skripti lõpp

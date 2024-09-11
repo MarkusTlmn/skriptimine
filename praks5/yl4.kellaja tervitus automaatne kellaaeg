@@ -1,0 +1,21 @@
+#!/bin/bash
+# kellaajaline tervitus
+# skripti algus
+
+# võtab aja süsteemist
+kaeg=$(date +"%H")
+
+# väljendab teate vastavalt ajale
+if (( kaeg >= 6 && kaeg <= 11 )); then
+    echo "Tere hommikust, $USER!"
+elif (( kaeg >= 12 && kaeg <= 17 )); then
+    echo "Tere päevast, $USER!"
+elif (( kaeg >= 18 && kaeg <= 21 )); then
+    echo "Tere õhtust, $USER!"
+elif (( kaeg >= 22 && kaeg <= 24 || kaeg >= 1 && kaeg <= 5 )); then
+    echo "Head ööd, $USER!"
+else
+    echo "Sisestatud arv pole sobilik"
+fi
+
+# skripti lõpp

@@ -1,0 +1,10 @@
+#!/bin/bash
+#
+# skripti algus
+read -p "Sisesta reisijate arv: " rarv
+read -p "Sisesta kohtade arv bussis: " karv
+
+# arvutused
+tais_bussid=$((($rarv + $karv -1)/ $karv))
+
+echo "Kokku on vaja $tais_bussid bussi"
