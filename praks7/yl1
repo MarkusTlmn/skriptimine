@@ -4,19 +4,11 @@
 
 # skripti algus
 
-read -p "Sisesta ridade arv: " rarv
-read -p "Sisesta tarnide arv reas: " rida
-
-
-for (( i = 1; i <= $rarv; i++ ))
+for (( i = 1; i <= 5; i++ ))
 do
-	for (( j = 1 ; j <= $rida; j++ ))
+	for (( j = 1 ; j <= 5; j++ ))
 	do
-	   if [ $j -eq 1 ]; then
-	       echo -n "$i. * "
-	   else
-	       echo -n "* "
-	   fi
+	   echo -n "* "
 	done
       echo ""
 done
