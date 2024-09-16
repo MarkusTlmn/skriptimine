@@ -1,0 +1,53 @@
+#!/bin/bash
+
+#
+
+# skripti algus
+
+read -p "Sisestage ridade arv: " read
+
+
+read -p  "Sisestage tärnide arv reas: " arv
+
+
+
+for ((x=1; $x<=$read; x++))
+do
+for ((z=1; $z<=$arv; z++))
+do
+
+if [ $x -eq 1 ]; then
+
+	if [ $z -eq 1 ]; then	
+	echo -n "$x.*"
+
+	else
+	echo -n "*"
+	fi
+
+elif [ $x -eq $read ]; then
+	if [ $z -eq 1 ]; then	
+	echo -n "$x.*"
+
+	else
+	echo -n "*"
+	fi
+
+else
+	if [ $z -eq 1 ]; then	
+	echo -n "$x.*"
+
+	elif [ $z -eq $arv ]; then
+	echo -n "*"
+
+	else
+	echo -n " "
+
+	fi
+
+fi
+
+done
+
+echo ""
+done
