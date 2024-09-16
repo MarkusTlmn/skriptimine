@@ -1,0 +1,23 @@
+#!/bin/bash
+
+#
+
+# skripti algus 
+
+read -p "Sisesta ridade arv: " rarv
+
+for (( i = 1; i <= rarv; i++ ))
+do
+    # valjastab rea numbri 
+    echo -n "$i. "
+    
+    for (( j = 1; j <= rarv; j++ ))
+    do
+        if [ $j -le $((rarv - i)) ]; then
+            echo -n "o "
+        else
+            echo -n "* "
+        fi
+    done
+    echo ""
+done
