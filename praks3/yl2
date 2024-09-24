@@ -1,0 +1,13 @@
+#!/bin/bash
+#
+# Eesti President
+#
+# skripti algus
+#
+aasta="2021"
+president="Alar Karis"
+lause_keskosa=". aastal valiti Eesti presidendiks "
+lause="$aasta$lause_keskosa$president"
+echo "$lause"
+#
+#skripti lõpp
