@@ -5,14 +5,19 @@
 # skripti algus
 #
 read -p "Sisestage reisijate arv: " reisijad
-read -p "Sisestage busside arv: " bussid
 read -p "Sisestage busside istekohtade arv: " istekohad
 
-# arvutab mitu bussi tuleb täis
-tais_bussid=$(echo "scale=0; $reisijad / $istekohad" | bc)
 
-# arvutab mitu reisijat jäävad ilma istekohata 
-reisijad_ilma=$(echo "scale=0; $reisijad - ($tais_bussid * $istekohad)" | bc)
+if (( $reisijad <= $istekohad )); then
+	tais_bussid=1
+	reisijad_ilma=0
+else	
+	# arvutab mitu bussi tuleb täis
+	tais_bussid=$(echo "scale=0; $reisijad / $istekohad" | bc)
+
+	# arvutab mitu reisijat jäävad ilma istekohata 
+	reisijad_ilma=$(echo "scale=0; $reisijad - ($tais_bussid * $istekohad)" | bc)
+fi
 
 echo "Täis busse on $tais_bussid"
 echo "$reisijad_ilma Reisijat jäid ilma istekohata"
