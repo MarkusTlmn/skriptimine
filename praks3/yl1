@@ -1,0 +1,11 @@
+#!/bin/bash
+#
+# Kasutaja ees- ja perenime küsija
+#
+# skripti algus
+#
+# read käsk küsib kasutajalt sisendit
+read -p "Sisesta oma ees- ja perenimi: " nimi
+echo "Tere $nimi"
+#
+# skripti lõpp 
