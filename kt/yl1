@@ -1,0 +1,12 @@
+#!/bin/bash
+
+#
+
+# algus
+
+kp=$(date +"%d.%m.%Y")
+aeg=$(date +"%H:%M")
+
+echo "Tere $USER!"
+
+echo "Täna on $kp kell $aeg"
